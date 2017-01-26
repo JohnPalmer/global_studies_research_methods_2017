@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Research Methods</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/beige.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+
+		<!-- In between the <div="reveal"> and the <div class="slides">-->
+		<header style="position: absolute;top: 5px; left: 5px; right: 5px; text-align: center; z-index:500; font-size:50px; color:white; padding: 5px; font-family: 'League Gothic', Impact, sans-serif"></header>
+		<footer style="position: absolute;bottom: 5px; left: 5px; text-align: center; z-index:500; font-size:12px;  padding: 5px; font-family: Arial, Helvetica, sans-serif"></footer>
+
+
+		<div class="slides">
+
+			<section>
+				<h1>Research Methods for Global Studies</h1>
+				<h3>Class 6: Estimation, Comparison, Correlation, Regression</h3>
+				<p><a href="http://johnrbpalmer.com">John Palmer</a>
+				</section>
+
+<section>
+<h2>Estimation</h2>
+</section>
+
+<section>
+<p>How do you estimate population mean \(\mu\) based on a random sample?</p>
+</section>
+
+<section>
+<h3>Point estimate</h3>
+$$\hat{\mu} = \bar{y}$$
+<ul style="list-style: none"><li>In other words, the estimator, \(\hat{\mu}\), of the population mean, \(\mu\), is the sample mean \(\bar{y}\)</li></ul>
+</section> 
+
+<section>
+<h3>Confidence Interval</h3>
+$$\textrm{CE}_{a\%} = \bar{y} \pm z\frac{s}{\sqrt{n}}$$
+<ul style="list-style: none"><li>where \(\textrm{CE}_{a\%}\) is the \(a\%\) confidence interval, \(z\) is the number of standard deviations from the mean of a normal distribution corresponding to this interval, \(s\) is the sample standard deviation, and \(n\) is the sample size. </li></ul>
+</section> 
+
+<section>
+<ul style="list-style: none"><li>For example, a 95% confidence interval is calculated as:</li></ul>
+$$\bar{y} \pm 1.96\frac{s}{\sqrt{n}}$$
+</section> 
+
+<section>
+<ul style="list-style: none"><li>Notes:</li></ul>
+<ul>
+<li>We are assuming here that sample size, \(n\), is large enough for the Central Limit Theorem to hold or that the population distribution is normal (in which case Central Limit Theorem is not needed).</li>
+<li>A more robust approach for small sample sizes and non-normal populations is to use the <i>t</i>-distribution. See Agresti & Finlay p. 118.</li>
+<li>For the 95% confidence interval, we often use \(z=2\) instead of \(z=1.96\) in order to simplify things.</li>
+</section> 
+
+<section>
+<p>Why does this work?</p>
+<ul>
+<li>This requires going through the steps we followed in Class 5 (which may seem scattered, but which all fit together).</li>
+</section> 
+
+<section>
+
+<h4>Step 1</h4>
+<ul style="list-style: none;">
+<li>Central Limit Theorem: For random sampling with a large sample size \(n\), the sampling distribution of the sample mean \(\hat{y}\) is approximately a normal distribution. (This is what we showed empirically in the R demonstration.)</li>
+</ul>
+</section> 
+
+<section>
+
+<h4>Step 2</h4>
+$$\sigma_{\bar{y}} = \frac{\sigma}{\sqrt{n}}$$
+<ul style="list-style: none;">
+<li>In other words, the standard error of the sample mean (i.e. the standard deviation of the sampling distribution for the mean), \(\sigma_{\bar{y}}\), is equal to the population standard deviation, \(\sigma\), divided by the square root of the sample size, \(n\).</li>
+</ul>
+</section> 
+
+<section>
+
+<h4>Step 3</h4>
+$$\hat{\sigma} = s = \sqrt{\frac{1}{n-1}\sum\left(y-\bar{y}\right)^2}$$
+<ul style="list-style: none;">
+<li>As an estimator of the population standard deviation,  \(\hat{\sigma}\), we use the sample standard deviation, \(s\).</li>
+</ul>
+</section> 
+
+<section data-state="gosset">
+<style>.gosset footer:after { content: "Portrait of William Sealy Gosset, a.k.a. Student, Public Domain, Wikimedia Commons"; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>	
+<h3>Student's t distribution</h3>
+<img class="stretch" src="images/William_Sealy_Gosset.jpg">
+</section>
+
+<section>
+<h3>Student's t distribution</h3>
+<img class="stretch" src="images/distributions.png">
+</section>
+
+<section>
+<h3>Student's t distribution</h3>
+<ul>
+<li>Bell-shaped and symmetric about a mean of 0</li>
+<li>Standard deviation and shape depend on degrees of freedom (\(df\))</li>
+<li>For inference about a population mean, \(df = n - 1 \)</li>
+<li>As \(df\) increases, t becomes more like normal; almost identical at \(df=30\)</li>
+</ul>
+</section>
+
+
+<section>
+<h3>Example: Student Height</h3>
+<a href="R_demo_class6.r">R Script</a><br>
+<a href="http://www.amstat.org/publications/jse/v20n3/mclaren/shoesize.xls">Dataset</a>
+</section>
+
+<section>
+<h3>Example: Student Shoe Size</h3>
+(Same R script and Dataset)
+</section>
+
+<section>
+<h3>Example: Family Planning and Fertility</h3>
+(Same R script) <br>
+<a href="http://data.princeton.edu/wws509/datasets/effort.dta">Dataset</a>
+</section>
+
+<section>
+<h4>Dataset</h4>
+<ul>
+<li>20 countries in Latin America and Caribean</li>
+<li>Change in crude birth rate (births per thousand population) between 1965 and 1975</li>
+<li>Social setting index</li>
+<li>Program effort index</li>
+</ul>
+</section>
+
+
+<section>
+<h4>Social Setting Index</h4>
+<ul>
+<li>literacy</li>
+<li>school enrollment</li>life expectancy</li>
+<li>infant mortality</li>
+<li>percent of males aged 15–64 in the non-agricultural labor force</li>
+<li>gross national product per capita</li>
+<li>percent of population living in urban areas.</li>
+</ul>
+</section>
+
+<section>
+<h4>Program Effort Index</h4>
+<ul>
+<li>Fertility reduction included in official planning policy Favorable public statements by political leaders</li> 
+<li>Contraception readily and easily available, publicly and commercially throughout the country</li>
+<li>Customs and legal regulations allow importation of contraceptives not manufactured locally</li>
+<li>Vigorous effort to provide family planning services to all MWRA (married women of reproductive age)</li>
+<li>Adequate family planning administration structure</li>
+<li>Training facilities available and utilized</li>
+</ul>
+</section>
+
+<section>
+<h4>Program Effort Index</h4>
+<ul>
+<li>Full-time home-visiting field workers</li>
+<li>Postpartum information, education, and service program</li> 
+<li>Abortion services openly and legally available to all</li> 
+<li>Voluntary sterilization services (male and female) openly and legally available to all</li>
+<li>Use of mass media on a substantial basis</li>
+<li>Government provides substantial part of family planning budget from its own resources</li>
+<li>Record keeping systems for clients at clinic level and for program service statistics</li>
+<li>Serious and continuous evaluation effort</li>
+</ul>
+</section>
+
+
+<section>
+<h2>Comparison</h2>
+</section>
+
+<section>
+<p>What if we want to test the hypothesis that the population mean is equal to some given value?</p>
+</section>
+
+<section>
+<h3>Hypotheses</h3>
+$$H_0: \mu = \mu_0$$
+$$H_a: \mu \neq \mu_0$$
+<ul style="list-style: none;">
+<li>We generally test a null hypothesis, \(H_0\), against an alternative hypothesis, \(H_a\). The alternative shown above is the 2-sided alternative. We might also specify a one-sided alternative:</li>
+</ul>
+$$H_a: \mu < \mu_0$$
+$$H_0: \mu > \mu_0$$
+
+</section>
+
+<section>
+<h3>Test Statistic</h3>
+$$t = \frac{\bar{y}-\mu_0}{se}$$
+<br>
+$$se = \frac{s}{\sqrt{n}}$$
+</section>
+
+
+<section>
+<h3>p-value</h3>
+<ul style="list-style: none;">
+<li>Probability that the test statistic equals the observed value or a more extreme one in the direction predicted by \(H_a\) assuming \(H_0\) is true.</li>
+</ul>
+</section>
+
+
+
+<section>
+<h2>Regression</h2>
+</section>
+
+<section>
+<h3>Prediction Equation</h3>
+$$\hat{y} = a + bx$$
+</section>
+
+
+<section>
+<h3>Ordinary Least Squares Calculations</h3>
+$$b = \frac{\sum\left(x - \bar{x}\right)\left(y - \bar{y}\right)}{\sum\left(x-\bar{x}\right)^2}$$
+<br>
+$$a = \bar{y} - b\bar{x}$$
+</section>
+
+<section>
+<h2>Correlation</h2>
+</section>
+
+<section>
+<h3>Definition</h3>
+<ul style="list-style: none;">
+<li>Correlation, <i>r</i>, is a standardized version of the slope in the regression equation</li>
+</ul>
+$$r = \left(\frac{s_x}{s_y}\right)b$$ 
+
+
+</section>
+
+
+
+							<section data-background="images/pencils.jpg" data-state="footer_pencils">
+								<div style="background-color: rgba(255, 255, 255, .95); padding:20px;">
+									<h2>Assignments</h2>
+									<ul>
+										<li><b>Read</b>: <a href="http://www.jstor.org/stable/1965523">Mauldin, W., Berelson, B., &amp; Sykes, Z. (1978)</a> by Tuesday lecture. (You can skip or skim the appendix.)</li>
+										<li><b>Write</b>: Remember: Source summary by 10:00 AM tomorrow.</li>
+										<li><b>Quizzes</b>: Quiz 2 will be available until 10:00 AM on Monday. Quiz 3 will be available starting at 10:00 AM Friday and also open until 10:00 AM on Monday. </li>
+									</ul>
+								</div>
+								<style>.footer_pencils footer:after { content: "Pencils, Public Domain, Wikimedia Commons"; color:white;background-color: rgba(0,0,0,0.5); padding: 5px;}</style>							
+								<div>&nbsp;</div>	
+							</section>
+
+						</div>
+					</div>
+
+					<script src="lib/js/head.min.js"></script>
+					<script src="js/reveal.js"></script>
+
+					<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/math/math.js', async: true }
+
+				]
+			});
+		</script>
+	</body>
+	</html>
