@@ -26,7 +26,9 @@ legend("topright",
 1-pt(1.96, 15)
 
 # loading data
-D = read.csv('shoesize.csv')
+D = read.csv2('shoesize.csv')
+D
+
 
 # exploring height
 D$Height
@@ -36,6 +38,9 @@ quantile(D$Height)
 hist(D$Height)
 plot(density(D$Height))
 
+sd(D$Height)/sqrt(408)
+
+
 # Assumming this data is a random sample of the full school populatio, what is our best estimate of the mean height of all students at this university? Provide a point estimate and 95% confidence interval.
 
 
@@ -43,6 +48,12 @@ plot(density(D$Height))
 # Assumming this data is a random sample of the full school populatio, what is our best estimate of the mean shoe sizeght of all students at this university? Provide a point estimate and 95% confidence interval.
 
 hist(D$Size)
+mean(D$Size)
+sd(D$Size)
+
+mean(D$Size)+(2*(sd(D$Size)/sqrt(408)))
+mean(D$Size)-(2*(sd(D$Size)/sqrt(408)))
+
 
 # What is the relationship between height and shoe size?
 
@@ -61,7 +72,7 @@ summary(M)
 
 # family planning data
 library(foreign)
-require(calibrate)
+library(calibrate)
 
 D = read.dta('effort.dta')
 head(D)
