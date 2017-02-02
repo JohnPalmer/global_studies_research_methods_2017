@@ -33,10 +33,17 @@
 
 			<section>
 				<h1>Research Methods for Global Studies</h1>
-				<h3>Class 8: Quantitative Methods</h3>
+				<h3>Class 8: Advanced Quantitative Methods</h3>
 				<p><a href="http://johnrbpalmer.com">John Palmer</a>
 				</section>
 
+
+<section>
+<h2>Motivation</h2>
+<ul>
+<li>The world is dynamic and non-linear.</li>
+<li>We care about causation</li>
+</section>
 
 <section>
 <h2>Revisiting Regression</h2>
@@ -55,7 +62,12 @@
 </section>
 
 <section>
-<h3>Basic Output</h3>
+<h3>Multiple variables</h3>
+$$\hat{y} = \alpha + \beta_1x_1 + \beta_2x_2$$
+</section>
+
+<section>
+<h3>Multiple variables</h3>
 <small>
 <table style="text-align:center">
 <tr><td colspan="2" style="border-bottom: 1px solid black"></td></tr>
@@ -79,6 +91,10 @@
 <a href="images/fp_3Dreg/index.html">3D</a>
 </section>
 
+<section>
+<h3>Categorical Independent Variables</h3>
+$$\hat{y} = \alpha + \beta_1{x_1} + \beta_2{\textrm{D}}$$
+</section>
 
 <section>
 <h3>Categorical Independent Variables</h3>
@@ -113,6 +129,17 @@
 </section>
 
 <section>
+<h3>Cross Tabulation</h3>
+</section>
+
+
+<section>
+<h3>Interaction Terms</h3>
+$$\hat{y} = \alpha + \beta_1x_1 + \beta_2\textrm{D} + \beta_3x_1\textrm{D}$$
+</section>
+
+
+<section>
 <h3>Interaction Terms</h3>
 <small>
 <table style="text-align:center"><tr><td colspan="2" style="border-bottom: 1px solid black"></td></tr>
@@ -142,6 +169,12 @@
 <img class="stretch" src="images/fp_reg_ints_slopes.png">
 </section>
 
+
+<section>
+<h3>Interacting Continuous Variables</h3>
+$$\hat{y} = \alpha + \beta_1x_1 + \beta_2x_2 + \beta_3x_1x_2$$
+</section>
+
 <section>
 <h3>Interacting Continuous Variables</h3>
 <small>
@@ -168,6 +201,12 @@
 <h3>Visualizing in 3-Dimensional Space</h3>
 <a href="images/fp_int_3Dreg/index.html">3D</a>
 </section>
+
+<section>
+<h3>Beyond Straight Lines</h3>
+$$\hat{y} = \alpha + \beta_1x_1 + \beta_2x_1^2$$
+</section>
+
 
 <section>
 <h3>Beyond Straight Lines</h3>
@@ -220,33 +259,39 @@
 
 
 <section>
-<h2>Generalized Linear Models</h2>
+<h2>Binary Dependent Variables</h2>
+<ul>
+<li>Logit regression models log odds of outcome</li>
+<li>Results can be interpreted in terms of probability</li>
+</ul>
 </section>
 
 <section>
-<h2>Cross Tabulation</h2>
+<h2>Categorical Dependent Variables</h2>
+<ul>
+<li>Ordered logit if dependent variable can be ordered</li>
+<li>Multinomial logit if not</li>
+</ul>
 </section>
+
+<section>
+<h3>Massey & Espinoza 1997</h3>
+</section>
+
+
+<section>
+<h2>Count Dependent Variables</h2>
+<ul>
+<li>Poisson regression</li>
+<li>Negative binomial regression</li>
+</ul>
+</section>
+
 
 <section>
 <h2>Path Analysis</h2>
 </section>
 
-<section>
-<h2>Multilevel Models</h2>
-</section>
-
-<section>
-<h2>Massey & Espinoza 1997</h2>
-</section>
-
-
-<section>
-<h2>Card 1990</h2>
-</section>
-
-<section>
-<h2>KT</h2>
-</section>
 
 
 
@@ -256,7 +301,9 @@
 								<div style="background-color: rgba(255, 255, 255, .95); padding:20px;">
 									<h2>Assignments</h2>
 									<ul>
-										<li><b>Read</b>: <a href="http://journals.sagepub.com/doi/abs/10.1177/001979399004300205">Card 1990</li>
+										<li><b>Read</b>: Bryman Ch. 6</li>
+										<li><b>Quiz</b>: Will be available starting at 10:00 am tomorrow.</li>
+
 									</ul>
 								</div>
 								<style>.footer_pencils footer:after { content: "Pencils, Public Domain, Wikimedia Commons"; color:white;background-color: rgba(0,0,0,0.5); padding: 5px;}</style>							
