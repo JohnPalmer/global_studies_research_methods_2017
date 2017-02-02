@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Research Methods</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/beige.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+
+		<!-- In between the <div="reveal"> and the <div class="slides">-->
+		<header style="position: absolute;top: 5px; left: 5px; right: 5px; text-align: center; z-index:500; font-size:50px; color:white; padding: 5px; font-family: 'League Gothic', Impact, sans-serif"></header>
+		<footer style="position: absolute;bottom: 5px; left: 5px; text-align: center; z-index:500; font-size:12px;  padding: 5px; font-family: Arial, Helvetica, sans-serif"></footer>
+
+
+		<div class="slides">
+
+			<section>
+				<h1>Research Methods for Global Studies</h1>
+				<h3>Class 8: Quantitative Methods</h3>
+				<p><a href="http://johnrbpalmer.com">John Palmer</a>
+				</section>
+
+
+<section>
+<h2>Revisiting Regression</h2>
+</section>
+
+<section>
+<h3>Visualizing Confidence Band</h3>
+
+<img class="stretch" src="images/fp_reg_ci.png">
+</section>
+
+
+<section>
+<h3>Pairwise Comparisons</h3>
+<img class="stretch" src="images/fp_pairs.png">
+</section>
+
+<section>
+<h3>Basic Output</h3>
+<small>
+<table style="text-align:center">
+<tr><td colspan="2" style="border-bottom: 1px solid black"></td></tr>
+<tr><td style="text-align:left"></td><td><em>Dependent variable:</em></td></tr>
+<tr><td style="text-align:left"></td><td>change</td></tr>
+<tr><td style="text-align:left">setting</td><td>0.271<sup>**</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.108)</td></tr>
+<tr><td style="text-align:left">effort</td><td>0.968<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.225)</td></tr>
+<tr><td style="text-align:left">Constant</td><td>-14.451<sup>*</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(7.094)</td></tr>
+<tr><td style="text-align:left">Observations</td><td>20</td></tr>
+<tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.707</td></tr>
+<tr><td style="text-align:left"><em>Note:</em></td><td style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+</table>
+</small>
+</section>
+
+<section>
+<h3>Visualizing in 3-Dimensional Space</h3>
+<a href="images/fp_3Dreg/index.html">3D</a>
+</section>
+
+
+<section>
+<h3>Categorical Independent Variables</h3>
+<small>
+<table style="text-align:center"><tr><td colspan="2" style="border-bottom: 1px solid black"></td></tr>
+<tr><td style="text-align:left"></td><td><em>Dependent variable:</em></td></tr>
+<tr><td style="text-align:left"></td><td>change</td></tr>
+<tr><td style="text-align:left">setting</td><td>0.169</td></tr>
+<tr><td style="text-align:left"></td><td>(0.106)</td></tr>
+<tr><td style="text-align:left">effort.Moderate</td><td>4.144</td></tr>
+<tr><td style="text-align:left"></td><td>(3.191)</td></tr>
+<tr><td style="text-align:left">effort.Strong</td><td>19.448<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(3.729)</td></tr>
+<tr><td style="text-align:left">Constant</td><td>-5.954</td></tr>
+<tr><td style="text-align:left"></td><td>(7.166)</td></tr>
+<tr><td style="text-align:left">Observations</td><td>20</td></tr>
+<tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.764</td></tr>
+<tr><td style="text-align:left"><em>Note:</em></td><td style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+</table>
+</small>
+</section>
+
+<section>
+<h3>Visualizing Categorical Differences</h3>
+<img class="stretch" src="images/fp_reg_cat.png">
+</section>
+
+
+<section>
+<h3>Visualizing the Model</h3>
+<img class="stretch" src="images/fp_reg_ints.png">
+</section>
+
+<section>
+<h3>Interaction Terms</h3>
+<small>
+<table style="text-align:center"><tr><td colspan="2" style="border-bottom: 1px solid black"></td></tr>
+<tr><td style="text-align:left"></td><td><em>Dependent variable:</em></td></tr>
+<tr><td style="text-align:left"></td><td>change</td></tr>
+<tr><td style="text-align:left">setting</td><td>0.184</td></tr>
+<tr><td style="text-align:left"></td><td>(0.140)</td></tr>
+<tr><td style="text-align:left">effortModerate</td><td>9.845</td></tr>
+<tr><td style="text-align:left"></td><td>(15.575)</td></tr>
+<tr><td style="text-align:left">effortStrong</td><td>-19.595</td></tr>
+<tr><td style="text-align:left"></td><td>(50.770)</td></tr>
+<tr><td style="text-align:left">setting:effortModerate</td><td>-0.087</td></tr>
+<tr><td style="text-align:left"></td><td>(0.233)</td></tr>
+<tr><td style="text-align:left">setting:effortStrong</td><td>0.457</td></tr>
+<tr><td style="text-align:left"></td><td>(0.604)</td></tr>
+<tr><td style="text-align:left">Constant</td><td>-6.880</td></tr>
+<tr><td style="text-align:left"></td><td>(9.317)</td></tr>
+<tr><td style="text-align:left">Observations</td><td>20</td></tr>
+<tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.745</td></tr>
+<tr><td style="text-align:left"><em>Note:</em></td><td style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+</table>
+</small>
+</section>
+
+<section>
+<h3>Visualizing the Model</h3>
+<img class="stretch" src="images/fp_reg_ints_slopes.png">
+</section>
+
+<section>
+<h3>Interacting Continuous Variables</h3>
+<small>
+<table style="text-align:center"><tr><td colspan="2" style="border-bottom: 1px solid black"></td></tr>
+<tr><td style="text-align:left"></td><td><em>Dependent variable:</em></td></tr>
+<tr><td style="text-align:left"></td><td>change</td></tr>
+<tr><td style="text-align:left">setting</td><td>0.189</td></tr>
+<tr><td style="text-align:left"></td><td>(0.162)</td></tr>
+<tr><td style="text-align:left">effort</td><td>-0.039</td></tr>
+<tr><td style="text-align:left"></td><td>(1.473)</td></tr>
+<tr><td style="text-align:left">setting:effort</td><td>0.013</td></tr>
+<tr><td style="text-align:left"></td><td>(0.019)</td></tr>
+<tr><td style="text-align:left">Constant</td><td>-8.502</td></tr>
+<tr><td style="text-align:left"></td><td>(11.218)</td></tr>
+<tr><td style="text-align:left">Observations</td><td>20</td></tr>
+<tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.698</td></tr>
+<tr><td style="text-align:left"><em>Note:</em></td><td style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+</table>
+</small>
+</section>
+
+
+<section>
+<h3>Visualizing in 3-Dimensional Space</h3>
+<a href="images/fp_int_3Dreg/index.html">3D</a>
+</section>
+
+<section>
+<h3>Beyond Straight Lines</h3>
+<small>
+<table style="text-align:center"><tr><td colspan="2" style="border-bottom: 1px solid black"></td></tr>
+<tr><td style="text-align:left"></td><td><em>Dependent variable:</em></td></tr>
+<tr><td style="text-align:left"></td><td>change</td></tr>
+<tr><td style="text-align:left">setting</td><td>-0.690</td></tr>
+<tr><td style="text-align:left"></td><td>(1.064)</td></tr>
+<tr><td style="text-align:left">setting_sq</td><td>0.009</td></tr>
+<tr><td style="text-align:left"></td><td>(0.008)</td></tr>
+<tr><td style="text-align:left">Constant</td><td>14.721</td></tr>
+<tr><td style="text-align:left"></td><td>(33.925)</td></tr>
+<tr><td style="text-align:left">Observations</td><td>20</td></tr>
+<tr><td style="text-align:left">R<sup>2</sup></td><td>0.492</td></tr>
+<tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.432</td></tr>
+<tr><td style="text-align:left">Residual Std. Error</td><td>8.903 (df = 17)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>8.217<sup>***</sup> (df = 2; 17)</td></tr>
+<tr><td style="text-align:left"><em>Note:</em></td><td style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+</table>
+</small>
+</section>
+
+<section>
+<h3>Beyond Straight Lines</h3>
+<img class="stretch" src="images/fp_reg_quad.png">
+</section>
+
+<section>
+<h3>Comparing Models</h3>
+<small>
+<table style="text-align:center"><tr><td colspan="3" style="border-bottom: 1px solid black"></td></tr>
+<tr><td style="text-align:left"></td><td colspan="2"><em>Dependent variable:</em></td></tr>
+<tr><td style="text-align:left"></td><td colspan="2">change</td></tr>
+<tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td></tr>
+<tr><td style="text-align:left">setting</td><td>0.505<sup>***</sup></td><td>-0.690</td></tr>
+<tr><td style="text-align:left"></td><td>(0.131)</td><td>(1.064)</td></tr>
+<tr><td style="text-align:left">setting_sq</td><td></td><td>0.009</td></tr>
+<tr><td style="text-align:left"></td><td></td><td>(0.008)</td></tr>
+<tr><td style="text-align:left">Constant</td><td>-22.125<sup>**</sup></td><td>14.721</td></tr>
+<tr><td style="text-align:left"></td><td>(9.642)</td><td>(33.925)</td></tr>
+<tr><td style="text-align:left">Observations</td><td>20</td><td>20</td></tr>
+<tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.423</td><td>0.432</td></tr>
+<tr><td style="text-align:left">Residual Std. Error</td><td>8.973 (df = 18)</td><td>8.903 (df = 17)</td></tr>
+<tr><td style="text-align:left">F Statistic</td><td>14.919<sup>***</sup> (df = 1; 18)</td><td>8.217<sup>***</sup> (df = 2; 17)</td></tr>
+<tr><td style="text-align:left"><em>Note:</em></td><td colspan="2" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+</table>
+</small>
+</section>
+
+
+<section>
+<h2>Generalized Linear Models</h2>
+</section>
+
+<section>
+<h2>Cross Tabulation</h2>
+</section>
+
+<section>
+<h2>Path Analysis</h2>
+</section>
+
+<section>
+<h2>Multilevel Models</h2>
+</section>
+
+<section>
+<h2>Massey & Espinoza 1997</h2>
+</section>
+
+
+<section>
+<h2>Card 1990</h2>
+</section>
+
+<section>
+<h2>KT</h2>
+</section>
+
+
+
+
+
+							<section data-background="images/pencils.jpg" data-state="footer_pencils">
+								<div style="background-color: rgba(255, 255, 255, .95); padding:20px;">
+									<h2>Assignments</h2>
+									<ul>
+										<li><b>Read</b>: <a href="http://journals.sagepub.com/doi/abs/10.1177/001979399004300205">Card 1990</li>
+									</ul>
+								</div>
+								<style>.footer_pencils footer:after { content: "Pencils, Public Domain, Wikimedia Commons"; color:white;background-color: rgba(0,0,0,0.5); padding: 5px;}</style>							
+								<div>&nbsp;</div>	
+							</section>
+
+						</div>
+					</div>
+
+					<script src="lib/js/head.min.js"></script>
+					<script src="js/reveal.js"></script>
+
+					<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/math/math.js', async: true }
+
+				]
+			});
+		</script>
+	</body>
+	</html>
