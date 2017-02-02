@@ -99,6 +99,7 @@ stargazer(M40, M4, type="html")
 
 p = ggplot(fpe, aes(x = setting, y = change))
 p + geom_point() + stat_smooth(method="lm", se=TRUE, fill="grey", formula=y ~ poly(x, 2, raw=TRUE))
+ggsave("fp_reg_quad.png")
 
 
 fpe$high_change = fpe$change > 20
