@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Research Methods</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/beige.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+
+		<!-- In between the <div="reveal"> and the <div class="slides">-->
+		<header style="position: absolute;top: 5px; left: 5px; right: 5px; text-align: center; z-index:500; font-size:50px; color:white; padding: 5px; font-family: 'League Gothic', Impact, sans-serif"></header>
+		<footer style="position: absolute;bottom: 5px; left: 5px; text-align: center; z-index:500; font-size:12px;  padding: 5px; font-family: Arial, Helvetica, sans-serif"></footer>
+
+
+		<div class="slides">
+
+			<section>
+				<h1>Research Methods for Global Studies</h1>
+				<h3>Class 15: Information Cascades; Agent-Based Models; Presenting Research</h3>
+				<p><a href="http://johnrbpalmer.com">John Palmer</a></p>
+				</section>
+
+				<section>
+				<h2>An Experiment</h2>
+				</section>
+
+				<section>
+				<ul><li><b>Box A</b>: red, red, blue</li>
+				<li><b>Box B</b>: blue, blue, red</li>
+				</ul>
+				</section>
+
+				<section>
+				<h2>Information Cascades</h2>
+				</section>
+
+				<section>
+				<h3>Definition</h3>
+				<ul>
+				<li>people abandon their  own information in favor of inferences based on earlier people’s actions</li>
+				</ul>
+				</section>
+
+				<section>
+				<h3>Conditions</h3>
+				<ul>
+				<li>Sequential decision-making
+				</li>
+				<li>Later decision-makers observe earlier ones and infer what they know</li>
+				</ul>
+				</section>
+
+				<section>
+				<h3><a href="https://static1.squarespace.com/static/540b5d8ae4b08308f411cfc9/t/5414fc87e4b00f3a4f0be566/1410661511886/afriggeri_icwsm2014.pdf" target="_blank">Friggeri et al. (2014)</a></h3>
+				</section>
+
+				<section>
+				<h4>Shares per upload</h4>
+				<p>How to "infer the head of the distribution from its tail"?</p>
+				</section>
+
+				<section>
+				<p>Probability that a cascade of <i>n</i> shares is in the sample:</p>
+				$$1 - (1 - p_s)^n$$
+				</section>
+
+
+<section>
+<h3>A related Sampling Problem</h2>
+<p>How to correct for uneven sampling effort?</p>
+</section>
+
+
+<section>
+<h4>Reporting Propensity Model</h4>
+			
+		probability ($\pi_i$) of $i$ sending report as function of:
+			<ul>
+				<li>time since registration ($t$)</li>
+				<li>$i$'s intrinsic motivation ($\alpha_i$)</li>
+			</ul>
+			<br><br>
+$$log\left(\frac{\pi_{it}}{1-\pi_{it}}\right) = \alpha_i + \beta_1t + \beta_2t^2 + \beta_3t^3$$
+</section>
+
+
+
+
+		<section>
+		<h4>Reporting Propensity Model</h4>
+		<img class="stretch" src="images/propensity_curve_participation_time.png">
+		</section>
+
+
+
+				<section>
+				<h2>Presenting Research</h2>
+				</section>
+
+		
+				<section>
+				<h3>Slides: Core Considerations</h3>
+				<ul>
+				<li>Slides should aid talk, not other way around</li>
+				<li>Slides should not distract</li>
+				<li>Slides should not be the default</li>
+				</ul>
+				</section>
+
+				<section>
+				<h3>Slides: Technical Considerations</h3>
+				<ul>
+				<li>Use clear, sans serif font</li>
+				<li>Keep them simple</li>
+				<li>Less is better</li>
+				<li>Make things big enough to read</li>
+				</ul>
+				</section>
+
+				<section>
+				<h3>Oral Presentations: Preparation</h3>
+				<ul>
+				<li>Start with messy ideas</li>
+				<li>Distill into outline</li>
+				<li>Write out some or all of speech - especially key phrasing</li>
+				<li>Distill speech to short outline/reminders</li>
+				<li>Practice</li>
+				</ul>
+				</section>
+
+				<section data-background="images/pencils.jpg" data-state="footer_pencils">
+					<div style="background-color: rgba(255, 255, 255, .95); padding:20px;">
+						<h2>Assignments</h2>
+						<ul>
+							<li><b>Read</b>: Santillana et al. (2014).</li>
+						</ul>
+					</div>
+					<style>.footer_pencils footer:after { content: "Pencils, Public Domain, Wikimedia Commons"; color:white;background-color: rgba(0,0,0,0.5); padding: 5px;}</style>							
+					<div>&nbsp;</div>	
+				</section>
+
+			</div>
+		</div>
+
+		<!-- FOOTERS -->
+		<style>.MUAP footer:after { content: "Andresswift, CC BY-SA 3.0, Wikimedia Commons."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>
+
+		<style>.gubrium_holstein_1997 footer:after { content: "See Gubrium, J. F., & Holstein, J. A. (1997). The new language of qualitative method."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>
+
+		<style>.sidewalk footer:after { content: "Duneier, M. Sidewalk. (Straus and Giroux, 1999)."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>
+
+
+		<style>.sidewalk_voices footer:after { content: "Duneier, M., & Back, L. (2006). Voices from the sidewalk: Ethnography and writing race. Ethnic and Racial Studies, 29(3), 543-565."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>
+
+		<style>.kvale_bryman footer:after { content: "From Bryman (2008), Social Research Methods, and Kvale (1996), InterViews."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>
+
+		<style>.kvale footer:after { content: "From Kvale (1996), InterViews."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>
+
+		<style>.footer_SDS footer:after { content: "Sutton et al., Una Ligera Introduccion a GIS (2009), http://docs.qgis.org/2.2/es/docs/gentle_gis_introduction/."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>	
+
+		<style>.footer_layer_stack footer:after { content: "Layer Stack, Ahlzen, CC BY-SA 2.0, http://wiki.openstreetmap.org/wiki/File:Layer-stack.jpg"; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>	
+
+		<style>.footer_bb footer:after { content: "Photo derived from Brooklyn Bridge, by Jim Henderson, Public Domain, Wikimedia Commons"; color:white;background-color: rgba(0,0,0,.8); padding: 5px;}</style>	
+
+		<style>.footer_receiver footer:after { content: "GPS Receiver, Simon Taylor, www.phooto.co.uk, CC BY-SA 2.5, Wikimedia Commons"; color:white;background-color: rgba(0,0,0,.8); padding: 5px;}</style>	
+
+		<style>.footer_sat footer:after { content: "GPS Satellite, NASA, Public Domain, Wikimedia Commons"; color:white;background-color: rgba(0,0,0,.8); padding: 5px;}</style>	
+
+		<style>.footer_tower footer:after { content: "Cell sites located in Ittefaq Colony, Jalalpur Jattan, Gujrat, S.M. Samee, CC BY-SA 4.0, Wikimedia Commons"; color:white;background-color: rgba(0,0,0,.8); padding: 5px;}</style>	
+
+
+		<style>.footer_newapproaches footer:after { content: "Palmer, J. R., Espenshade, T. J., Bartumeus, F., Chung, C. Y., Ozgencil, N. E., & Li, K. (2013). New approaches to human mobility: Using mobile phones for demographic research. Demography, 50(3), 1105-1128."; color:black;background-color: rgba(0,0,0,0); padding: 5px;}</style>	
+
+		<!-- END FOOTERS -->
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				transition: 'fade',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/math/math.js', async: true }
+
+				]
+			});
+		</script>
+	</body>
+	</html>
